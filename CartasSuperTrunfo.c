@@ -7,23 +7,26 @@
 //Teste larissa
 
 int main() {
-//desafio NOVATO
+//desafio AVENTUREIRO
 
 //cadastro da primeira carta
 
  //definição e inicialiação de variáveis
 
-        char estado1[20] = "Ceará";
-        char codigo1[5] = "A01";
-        char cidade1[20] = "Betim";
-        int populacao1 = 10;
-        float area1 = 100;
-        float PIB1 = 1.0;
-        int turisticos1 = 1 
+        char estado1[20];
+        char codigo1[5];
+        char cidade1[20];
+        int populacao1;
+        float area1;
+        float PIB1;
+        int turisticos1;
+        float densidade1;
+        float PIBpercapita1;
+        
 
 //aqui solicita ao usuario de cadastre os dados pedidos
 
-       ; printf("Olá usuário! Cadastre a primeira carta \n");
+       printf("Olá usuário! Cadastre a primeira carta \n");
 
             printf("Digite o nome do estado: \n");
             scanf("%s", estado1);
@@ -46,9 +49,12 @@ int main() {
             printf("Digite o numero de pontos turisticos: \n");
             scanf("%d", &turisticos1);
 
-/*coloquei os códigos sem espaço aqui porque com espaço estava dando um erro nas entradas da
-área, PIB e pontos turísticos*/
-   
+//definindo as operações matemáticas para as novas variáveis da carta 1
+
+            densidade1 = (float)(populacao1 / area1);
+            PIBpercapita1 = (float)(PIB1 / populacao1);
+            
+
 //mostra os dados da primeira carta cadastrados pelo usuário
             
             printf("Perfeito! Estes são os dados da primeira carta cadastrada: \n");
@@ -57,10 +63,13 @@ int main() {
             printf("Cidade: %s\n", cidade1);
             printf("População: %d\n", populacao1);
             printf("Área: %.2f\n", area1);
+            printf("Densidade demográfica: %.2f\n", densidade1);
             printf("PIB: %.2f\n", PIB1);
-            printf("Número de pontos turísticos %d\n", turisticos1);
+            printf("PIB per capita: %.2f\n", PIBpercapita1);
+            printf("Número de pontos turísticos %d\n", turisticos1);            
 
 //término do cadastro da primeira carta, seguindo para a segunda
+//adicionei as duas novas variáveis (densidade demográfica e PIB per capita)
 
 //definindo e inicializando novamente as variáveis para a segunda carta
         
@@ -70,11 +79,13 @@ int main() {
         int populacao2 = 20;
         float area2 = 200;
         float PIB2 = 2.0;
-        int turisticos2 = 2 
+        int turisticos2 = 2;
+        float densidade2;
+        float PIBpercapita2;
 
 //solicitação ao usuário de cadastre os dados pedidos
 
-       ; printf("Agora cadastre a segunda carta \n");
+       printf("Agora cadastre a segunda carta \n");
 
             printf("Digite o nome do estado: \n");
             scanf("%s", estado2);
@@ -97,6 +108,12 @@ int main() {
             printf("Digite o numero de pontos turisticos: \n");
             scanf("%d", &turisticos2);
 
+//definindo as operações matemáticas para as novas variáveis da carta 2
+
+            densidade2 = (float)(populacao2 / area2);
+            PIBpercapita2 = (float) (PIB2 / populacao2);
+
+
 //mostra os dados da segunda carta cadastrados pelo usuário
             
             printf("Muito bom! Estes são os dados da segunda carta cadastrada: \n");
@@ -104,27 +121,15 @@ int main() {
             printf("Código da carta: %s\n", codigo2);
             printf("Cidade: %s\n", cidade2);
             printf("População: %d\n", populacao2);
+            printf("Densidade demográfica: %.2f\n", densidade2);
             printf("Área: %.2f\n", area2);
             printf("PIB: %.2f\n", PIB2);
+            printf("PIB per capita: %.2f\n", PIBpercapita2);
             printf("Número de pontos turísticos %d\n", turisticos2);
 
             printf("Parabéns usuário! Você cadastrou duas cartas com sucesso! \n");
 
-    
-    
-    
-    
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+//código finalizado com a adição das novas variáveis
 
 
     return 0;
