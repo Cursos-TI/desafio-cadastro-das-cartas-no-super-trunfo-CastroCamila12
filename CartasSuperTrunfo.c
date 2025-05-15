@@ -1,10 +1,6 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
 
 int main() {
 //desafio AVENTUREIRO
@@ -16,7 +12,7 @@ int main() {
         char estado1[20];
         char codigo1[5];
         char cidade1[20];
-        int populacao1;
+        unsigned long int populacao1;
         float area1;
         float PIB1;
         int turisticos1;
@@ -38,7 +34,7 @@ int main() {
             scanf("%s", cidade1);
 
             printf("Digite a população da cidade: \n");
-            scanf("%d", &populacao1);
+            scanf("%lu", &populacao1);
 
             printf("Digite a área da cidade em Km2: \n");
             scanf("%f", &area1);
@@ -53,6 +49,8 @@ int main() {
 
             densidade1 = (float)(populacao1 / area1);
             PIBpercapita1 = (float)(PIB1 / populacao1);
+            long double superpoder1 = (long double) (populacao1 + area1 + (1 / densidade1) + PIB1 +
+            PIBpercapita1 + turisticos1); //adicionei a fórmula do superpoder
             
 
 //mostra os dados da primeira carta cadastrados pelo usuário
@@ -61,12 +59,14 @@ int main() {
             printf("Estado: %s\n", estado1 );
             printf("Código da carta: %s\n", codigo1);
             printf("Cidade: %s\n", cidade1);
-            printf("População: %d\n", populacao1);
+            printf("População: %lu\n", populacao1);
             printf("Área: %.2f\n", area1);
             printf("Densidade demográfica: %.2f\n", densidade1);
             printf("PIB: %.2f\n", PIB1);
             printf("PIB per capita: %.2f\n", PIBpercapita1);
-            printf("Número de pontos turísticos %d\n", turisticos1);            
+            printf("Número de pontos turísticos %d\n", turisticos1);
+            printf("Superpoder:%.2Lf\n", superpoder1); //adicionei a instrução para exibir o resultado do superpoder
+                     
 
 //término do cadastro da primeira carta, seguindo para a segunda
 //adicionei as duas novas variáveis (densidade demográfica e PIB per capita)
@@ -76,7 +76,7 @@ int main() {
         char estado2[20] = "Pará";
         char codigo2[5] = "A02";
         char cidade2[20] = "Caeté";
-        int populacao2 = 20;
+        unsigned long int populacao2 = 20;
         float area2 = 200;
         float PIB2 = 2.0;
         int turisticos2 = 2;
@@ -97,7 +97,7 @@ int main() {
             scanf("%s", cidade2);
 
             printf("Digite a população da cidade: \n");
-            scanf("%d", &populacao2);
+            scanf("%lu", &populacao2);
 
             printf("Digite a área da cidade em Km2: \n");
             scanf("%f", &area2);
@@ -112,7 +112,8 @@ int main() {
 
             densidade2 = (float)(populacao2 / area2);
             PIBpercapita2 = (float) (PIB2 / populacao2);
-
+            long double superpoder2 = (long double) (populacao2 + area2 + (1 / densidade2) + PIB2 +
+            PIBpercapita2 + turisticos2); //adicionei a fórmula do superpoder
 
 //mostra os dados da segunda carta cadastrados pelo usuário
             
@@ -120,16 +121,32 @@ int main() {
             printf("Estado: %s\n", estado2 );
             printf("Código da carta: %s\n", codigo2);
             printf("Cidade: %s\n", cidade2);
-            printf("População: %d\n", populacao2);
-            printf("Densidade demográfica: %.2f\n", densidade2);
+            printf("População: %lu\n", populacao2);
             printf("Área: %.2f\n", area2);
+            printf("Densidade demográfica: %.2f\n", densidade2);
             printf("PIB: %.2f\n", PIB2);
             printf("PIB per capita: %.2f\n", PIBpercapita2);
             printf("Número de pontos turísticos %d\n", turisticos2);
-
+            printf("O valor é:%.2Lf\n", superpoder2);// adicionei exibição do superpoder
+            
             printf("Parabéns usuário! Você cadastrou duas cartas com sucesso! \n");
 
-//código finalizado com a adição das novas variáveis
+
+//desafio MESTRE
+//comparação entre as cartas cadastradas
+
+        printf("Agora começa a competição!\n");
+        printf("Vamos comparar as cartas\n");
+
+        printf(" POPULAÇÃO: A carta 1 venceu? %d\n", populacao1 > populacao2);
+        printf(" ÁREA: A carta 1 venceu? %d\n", area1 > area2);
+        printf(" DENSIDADE DEMOGRÁFICA: A carta 1 venceu? %d\n", densidade1 < densidade2);
+        printf(" PIB: A carta 1 venceu? %d\n", PIB1 > PIB2);
+        printf(" PIB PER CAPITA: A carta 1 venceu? %d\n", PIBpercapita1 > PIBpercapita2);
+        printf(" NÚMERO DE PONTOS TURÍSTICOS: A carta 1 venceu? %d\n", turisticos1 > turisticos2);
+        printf(" SUPERPODER: A carta 1 venceu? %d\n", superpoder1 > superpoder2);
+
+//código finalizado - desafio mestre cumprido
 
 
     return 0;
