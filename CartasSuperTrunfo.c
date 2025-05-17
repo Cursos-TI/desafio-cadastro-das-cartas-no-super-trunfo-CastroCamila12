@@ -135,7 +135,7 @@ int main() {
 //desafio MESTRE
 //comparação entre as cartas cadastradas
 
-        printf("Agora começa a competição!\n");
+       /*printf("Agora começa a competição!\n");
         printf("Vamos comparar as cartas\n");
 
         printf(" POPULAÇÃO: A carta 1 venceu? %d\n", populacao1 > populacao2);
@@ -144,9 +144,90 @@ int main() {
         printf(" PIB: A carta 1 venceu? %d\n", PIB1 > PIB2);
         printf(" PIB PER CAPITA: A carta 1 venceu? %d\n", PIBpercapita1 > PIBpercapita2);
         printf(" NÚMERO DE PONTOS TURÍSTICOS: A carta 1 venceu? %d\n", turisticos1 > turisticos2);
-        printf(" SUPERPODER: A carta 1 venceu? %d\n", superpoder1 > superpoder2);
+        printf(" SUPERPODER: A carta 1 venceu? %d\n", superpoder1 > superpoder2);*/
 
 //código finalizado - desafio mestre cumprido
+
+
+               // -----------------------------------
+
+//Desafio Super Trunfo - Países - MÓDULO 2
+
+//Iniciando nível NOVATO
+
+//Inseri as estruturas de comparação para todos os atributos das cartas:
+
+        printf("Agora vamos comparar as duas cartas cadastradas!\n");
+
+        printf("Carta 1 - %s,  população: %lu\n", cidade1, populacao1);
+        printf("Carta 2 - %s,  população: %lu\n", cidade2, populacao2);
+
+        if(populacao1 > populacao2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+        
+        printf("Carta 1 - %s,  área: %.2f\n", cidade1, area1);
+        printf("Carta 2 - %s,  área: %.2f\n", cidade2, area2);
+
+        if(area1 > area2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+
+        printf("Carta 1 - %s,  densidade demográfica: %.2f\n", cidade1, densidade1);
+        printf("Carta 2 - %s,  densidade demográfica: %.2f\n", cidade2, densidade2);
+
+        if(densidade1 < densidade2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+
+        printf("Carta 1 - %s,  PIB: %.2f\n", cidade1, PIB1);
+        printf("Carta 2 - %s,  PIB: %.2f\n", cidade2, PIB2);
+
+        if(PIB1 > PIB2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+
+        printf("Carta 1 - %s,  PIB per capita: %.2f\n", cidade1, PIBpercapita1);
+        printf("Carta 2 - %s,  PIB per capita: %.2f\n", cidade2, PIBpercapita2);
+
+        if(PIBpercapita1 > PIBpercapita2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+
+        printf("Carta 1 - %s,  número de pontos turísticos: %d\n", cidade1, turisticos1);
+        printf("Carta 2 - %s,  número de pontos turísticos: %d\n", cidade2, turisticos2);
+
+        if(turisticos1 > turisticos2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
+
+        printf("Carta 1 - %s,  superpoder: %.2Lf\n", cidade1, superpoder1);
+        printf("Carta 2 - %s,  superpoder: %.2Lf\n", cidade2, superpoder2);
+
+        if(superpoder1 > superpoder2){
+                printf("A carta 1 (%s) venceu!\n", cidade1);
+        } else {
+                printf("A carta 2 (%s) venceu!\n", cidade2);
+        }
+
 
 
     return 0;
