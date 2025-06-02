@@ -301,10 +301,10 @@ int resultado2;
       }
 
       printf("\n");
-      printf("Obrigada por jogar!\n");
+      printf(" *** Obrigada por jogar! ***\n");
 /*
 
-//Aventureiro
+//Aventureiro e mestre - módulo 1
 //inserindo o switch com as condições de comparação para os atributos
 switch (escolhaJogador) {
   
