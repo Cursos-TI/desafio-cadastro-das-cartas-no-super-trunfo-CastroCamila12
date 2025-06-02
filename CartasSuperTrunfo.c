@@ -23,6 +23,7 @@ int main() {
 //aqui solicita ao usuario de cadastre os dados pedidos
 
        printf("Olá usuário! Cadastre a primeira carta \n");
+       printf("\n");
 
             printf("Digite o nome do estado: ");
             scanf("%s", estado1);
@@ -45,6 +46,8 @@ int main() {
             printf("Digite o numero de pontos turisticos: ");
             scanf("%d", &turisticos1);
 
+            printf("\n");
+
 //definindo as operações matemáticas para as novas variáveis da carta 1
 
             densidade1 = (float)(populacao1 / area1);
@@ -56,6 +59,7 @@ int main() {
 //mostra os dados da primeira carta cadastrados pelo usuário
             
             printf("Perfeito! Estes são os dados da primeira carta cadastrada: \n");
+            printf("\n");
             printf("Estado: %s\n", estado1 );
             printf("Código da carta: %s\n", codigo1);
             printf("Cidade: %s\n", cidade1);
@@ -66,7 +70,7 @@ int main() {
             printf("PIB per capita: %.2f\n", PIBpercapita1);
             printf("Número de pontos turísticos %d\n", turisticos1);
             printf("Super poder:%.2Lf\n", superpoder1); //adicionei a instrução para exibir o resultado do superpoder
-                     
+            printf("\n");        
 
 //término do cadastro da primeira carta, seguindo para a segunda
 //adicionei as duas novas variáveis (densidade demográfica e PIB per capita)
@@ -86,6 +90,7 @@ int main() {
 //solicitação ao usuário de cadastre os dados pedidos
 
        printf("Agora cadastre a segunda carta \n");
+       printf("\n");
 
             printf("Digite o nome do estado: ");
             scanf("%s", estado2);
@@ -108,6 +113,8 @@ int main() {
             printf("Digite o numero de pontos turisticos: ");
             scanf("%d", &turisticos2);
 
+            printf("\n");
+
 //definindo as operações matemáticas para as novas variáveis da carta 2
 
             densidade2 = (float)(populacao2 / area2);
@@ -118,6 +125,7 @@ int main() {
 //mostra os dados da segunda carta cadastrados pelo usuário
             
             printf("Muito bom! Estes são os dados da segunda carta cadastrada: \n");
+            printf("\n");
             printf("Estado: %s\n", estado2 );
             printf("Código da carta: %s\n", codigo2);
             printf("Cidade: %s\n", cidade2);
@@ -128,11 +136,14 @@ int main() {
             printf("PIB per capita: %.2f\n", PIBpercapita2);
             printf("Número de pontos turísticos %d\n", turisticos2);
             printf("Super poder:%.2Lf\n", superpoder2);// adicionei exibição do superpoder
+            printf("\n");
             
             printf("Parabéns usuário! Você cadastrou duas cartas com sucesso! \n");
 
+            printf("\n");
 
-//desafio MESTRE
+
+//desafio MESTRE (MÓDULO 1)
 //comparação entre as cartas cadastradas
 
        /*printf("Agora começa a competição!\n");
@@ -153,13 +164,16 @@ int main() {
 
 //Desafio Super Trunfo - Países - MÓDULO 2
 
-//Iniciando nível AVENTUREIRO
+//Iniciando nível MESTRE
 
 //Exibe menu interativo para que o jogador escolha o atributo da sua carta para comparação
-int escolhaJogador; //aqui armazena o valor escolhido pelo jogador
+int escolhaJogador1;
+int escolhaJogador2;
+int resultado1;
+int resultado2;
 
-  printf("Agora vamos comparar as duas cartas cadastradas!\n");
-  printf("Lista de atributos para comparação:\n");
+  printf("Vamos comparar dois atributos das cartas cadastradas\n");
+  printf("\n");
   printf("1. População\n");
   printf("2. Área\n");
   printf("3. Densidade demográfica\n");
@@ -167,9 +181,130 @@ int escolhaJogador; //aqui armazena o valor escolhido pelo jogador
   printf("5. PIB per capita\n");
   printf("6. Número de pontos turísticos\n");
   printf("7. Super poder\n");
-  printf("Digite o número do atributo da sua carta que você quer comparar:  \n");
-  scanf("%d", &escolhaJogador);
+  printf("\n");
+  
+  printf("Escolha o primeiro atributo: ");
+  scanf("%d", &escolhaJogador1);
+ 
+  switch (escolhaJogador1) {
+        case 1:
+        printf("Você escolheu o atributo POPULAÇÃO\n");
+        resultado1 = populacao1 > populacao2 ? 1 : 0;
+        break;
 
+        case 2:
+        printf("Você escolheu o atributo ÁREA\n");
+        resultado1 = area1 > area2 ? 1 : 0;
+        break;
+
+        case 3:
+        printf("Você escolheu o atributo DENSIDADE DEMOGRÁFICA\n");
+        resultado1 = densidade1 < densidade2 ? 1 : 0;
+        break;
+
+        case 4:
+        printf("Você escolheu o atributo PIB\n");
+        resultado1 = PIB1 > PIB2 ? 1 : 0;
+        break;
+
+        case 5:
+        printf("Você escolheu o atributo PIB PER CAPITA\n");
+        resultado1 = PIBpercapita1 > PIBpercapita2;
+        break;
+
+        case 6:
+        printf("Você escolheu o atributo NÚMERO DE PONTOS TURÍSTICOS\n");
+        resultado1 = turisticos1 > turisticos2 ? 1 : 0;
+        break;
+
+        case 7:
+        printf("Você escolheu o atributo SUPER PODER\n");
+        resultado1 = superpoder1 > superpoder2 ? 1 : 0;
+        break;
+
+        default:
+        printf("Opção inválida\n");
+        break;
+        }
+  printf("\n");
+
+  printf("1. População\n");
+  printf("2. Área\n");
+  printf("3. Densidade demográfica\n");
+  printf("4. PIB\n");
+  printf("5. PIB per capita\n");
+  printf("6. Número de pontos turísticos\n");
+  printf("7. Super poder\n");
+  printf("\n");
+
+  printf("ATENÇÃO! Você não deve escolher o mesmo atributo duas vezes!\n");
+  printf("Agora escolha o segundo atributo: ");
+  scanf("%d", &escolhaJogador2);
+
+  printf("\n");
+
+  if (escolhaJogador1 == escolhaJogador2){
+    printf("Inválido: Você escolheu dois atributos iguais! Comece novamente.\n");
+  
+  } else {
+        switch (escolhaJogador2) {
+        case 1:
+        printf("Você escolheu o atributo POPULAÇÃO\n");
+        resultado2 = populacao1 > populacao2 ? 1 : 0;
+        break;
+
+        case 2:
+        printf("Você escolheu o atributo ÁREA\n");
+        resultado2 = area1 > area2 ? 1 : 0;
+        break;
+
+        case 3:
+        printf("Você escolheu o atributo DENSIDADE DEMOGRÁFICA\n");
+        resultado2 = densidade1 < densidade2 ? 1 : 0;
+        break;
+
+        case 4:
+        printf("Você escolheu o atributo PIB\n");
+        resultado2 = PIB1 > PIB2 ? 1 : 0;
+        break;
+
+        case 5:
+        printf("Você escolheu o atributo PIB PER CAPITA\n");
+        resultado2 = PIBpercapita1 > PIBpercapita2;
+        break;
+
+        case 6:
+        printf("Você escolheu o atributo NÚMERO DE PONTOS TURÍSTICOS\n");
+        resultado2 = turisticos1 > turisticos2 ? 1 : 0;
+        break;
+
+        case 7:
+        printf("Você escolheu o atributo SUPER PODER\n");
+        resultado2 = superpoder1 > superpoder2 ? 1 : 0;
+        break;
+
+        default:
+        printf("Opção inválida\n");
+        break;
+      }
+  }
+      printf("\n");
+
+      if (resultado1 == 1 && resultado2 == 1){
+      printf("Parabéns, você venceu!\n");
+
+      } else if ( resultado1 != resultado2) {
+      printf("Deu empate!\n");
+
+      } else {
+          printf("Você perdeu!\n");
+      }
+
+      printf("\n");
+      printf("Obrigada por jogar!\n");
+/*
+
+//Aventureiro
 //inserindo o switch com as condições de comparação para os atributos
 switch (escolhaJogador) {
   
@@ -286,8 +421,10 @@ switch (escolhaJogador) {
   break;
 }
         
-        printf(" ### Obrigada por jogar! ###\n ");
+        printf(" ### Obrigada por jogar! ###\n ");*/
 
+ 
 
-    return 0;
+   return 0;
+
 }
